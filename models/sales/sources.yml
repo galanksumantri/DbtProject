@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: sales
+    database: Sales  # Sesuai dengan TABLE_CATALOG
+    schema: dbo      # Sesuai dengan TABLE_SCHEMA
+    tables:
+      - name: orders
+      - name: customers
+      - name: products

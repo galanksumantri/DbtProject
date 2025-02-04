@@ -1,0 +1,46 @@
+version: 2
+
+models:
+  - name: sales_model
+    description: "Model yang menggabungkan data pesanan, pelanggan, dan produk untuk analisis penjualan."
+    columns:
+      - name: OrderID
+        description: "ID unik dari setiap pesanan."
+        tests:
+          - not_null
+          - unique
+
+      - name: CustomerID
+        description: "ID pelanggan yang melakukan pesanan."
+        tests:
+          - not_null
+
+      - name: CustomerName
+        description: "Nama pelanggan yang melakukan pesanan."
+
+      - name: ProductID
+        description: "ID produk yang dipesan."
+        tests:
+          - not_null
+
+      - name: ProductName
+        description: "Nama produk yang dipesan."
+
+      - name: Category
+        description: "Kategori produk."
+
+      - name: Quantity
+        description: "Jumlah produk yang dipesan."
+        tests:
+          - not_null
+
+      - name: Price
+        description: "Harga satuan produk."
+
+      - name: TotalSales
+        description: "Total penjualan (Quantity * Price)."
+
+      - name: OrderDate
+        description: "Tanggal pemesanan."
+        tests:
+          - not_null
